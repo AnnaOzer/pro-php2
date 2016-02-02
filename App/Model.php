@@ -9,7 +9,10 @@
 namespace App;
 
 
-class Model {
+use App\Models\HasEmail;
+
+class Model
+{
 
     const TABLE ='';
 
