@@ -12,12 +12,7 @@ use App\Models\HasEmail;
 use App\Models\User;
 
 
-$users = User::findAll();
-
-function sendEmail(HasEmail $user, $message)
-{
-      echo 'Почта уходит на ' . $user->email;
-}
-
-
-sendEmail($users[0], 'Hello!');
+$user = new User();
+$user->name = 'Vasya';
+$user->email = 'v@pupkin.ru';
+$user->insert();
