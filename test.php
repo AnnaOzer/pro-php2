@@ -5,18 +5,11 @@
  * Date: 29.01.2016
  * Time: 4:13
  */
+require __DIR__ .'/autoload.php';
 
-class First {
-    public static $test = 1;
-    public static function test()
-    {
-        echo static::$test;
-    }
-}
+$s = \App\Singleton::instance();
+$s->counter = 1;
+var_dump($s);
 
-class Second extends First
-{
-    public static $test = 2;
-}
-
-Second::test();
+$s=\App\Singleton::instance();
+var_dump($s);
