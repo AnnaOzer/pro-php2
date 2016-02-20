@@ -11,6 +11,12 @@ namespace App\Models;
 use App\Db;
 use App\Model;
 
+/**
+ * Class User
+ * @package App\Models
+ *
+ * @property int $age
+ */
 class User extends Model
 implements HasEmail
 {
@@ -20,6 +26,11 @@ implements HasEmail
     public $email;
     public $name;
 
+    /**
+     * Метод, возвращающий адрес e-mail
+     * @deprecated
+     * @return string Адрес электронной почты
+     */
     public function getEmail() {
 
         return $this->email;
