@@ -21,15 +21,15 @@ class Db
         $this->dbh = new \PDO('mysql:host=127.0.0.1;dbname=pro-php2-test', 'root', '');
     }
 
-    public function execute($sql, $params = []){
+    public function execute($sql, $params=[]){
         $sth = $this->dbh->prepare($sql);
         $res = $sth->execute($params);
         return $res;
     }
 
-    public function query($sql, $class, $params=[]){
+    public function query($sql, $params, $class){
         $sth = $this->dbh->prepare($sql);
-        $res = $sth->execute();
+        $res = $sth->execute($params);
         if (false!==$res) {
             return $sth->fetchAll(\PDO::FETCH_CLASS, $class);
         }
