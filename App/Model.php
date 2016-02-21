@@ -36,7 +36,7 @@ class Model
             'SELECT * FROM ' . static::TABLE . ' WHERE id=:id',
             [':id' => $id],
             static::class
-        );
+        )[0];
     }
 
 
