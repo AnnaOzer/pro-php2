@@ -24,9 +24,10 @@ $user->getEmail();
 */
 
 
-
+/*
 $view = new \App\View();
 $view->title="Мой крутой сайт!";
+*/
 /*$view->desc = 'Сайт про новости';
 
 $view->users = \App\Models\User::findAll();
@@ -38,7 +39,11 @@ die;
 echo $view->render(__DIR__ . '/App/templates/index.php');
 */
 
-
+/*
 $view->news = \App\Models\News::findAll();
 
 $view->display(__DIR__ . '/App/templates/index.php');
+*/
+
+$controller = new \App\Controllers\News();
+$controller->action('Index');
