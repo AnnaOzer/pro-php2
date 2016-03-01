@@ -18,9 +18,9 @@
     <![endif]-->
 </head>
 <body>
-<h1>Все новости</h1>
+<h1>Одна новость</h1>
 
-<?php foreach ($news as $article) : ?>
+
 <div class="panel panel-default">
     <div class="panel-heading">
         <?php echo $article->title; ?></div>
@@ -32,7 +32,7 @@
     </div>
 </div>
 
-<?php endforeach; ?>
+
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
