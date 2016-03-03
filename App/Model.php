@@ -14,7 +14,7 @@ use App\Models\HasEmail;
 class Model
 {
 
-    const TABLE ='';
+    const TABLE = '';
 
     public $id;
 
@@ -40,7 +40,8 @@ class Model
     }
 
 
-    public function isNew() {
+    public function isNew()
+    {
 
         return empty($this->id);
 
@@ -48,18 +49,18 @@ class Model
 
     public function insert()
     {
-        if(!$this->isNew()) {
+        if (!$this->isNew()) {
             return;
         }
 
         $columns = [];
         $values = [];
-        foreach ($this as $k=> $v) {
+        foreach ($this as $k => $v) {
             if ('id' == $k) {
                 continue;
             }
             $columns[] = $k;
-            $values[':'.$k] = $v;
+            $values[':' . $k] = $v;
         }
         var_dump($values);
 
